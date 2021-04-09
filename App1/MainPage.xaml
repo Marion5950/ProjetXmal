@@ -3,27 +3,83 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.MainPage">
 
-
-
-
-        <Frame BackgroundColor="Black" Padding="0, 0, 0,300" Margin="10" CornerRadius="10">
-
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#000">
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100*"/>
+                    <RowDefinition Height="250*"/>
+                </Grid.RowDefinitions>
+                <Frame BackgroundColor="DimGray" Padding="0" Margin="5" CornerRadius="10" Grid.Column="0" Grid.Row="0">
+                    <Grid Margin="10,10,10,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="jogging.png" Grid.Column="0" Grid.Row="0"/>
+                        <Label Text="Ostricourt" FontSize="Title" TextColor="#fff"  Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"/>
+                        <Label Text="7,00 km" FontSize="Title" TextColor="#fff" HorizontalTextAlignment="Center"  Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"/>
+                        <Label Text="Temps"  FontSize="Title" TextColor="#fff" HorizontalTextAlignment="Center"  Grid.Column="1" Grid.Row="1"/>
+                        <Label Text="48:58"  FontSize="Body" TextColor="#fff" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+                        <Label Text="Allure"  FontSize="Title" TextColor="#fff" HorizontalTextAlignment="Center"  Grid.Column="2" Grid.Row="1"/>
+                        <Label Text="7.00"  FontSize="Body" TextColor="#fff" HorizontalTextAlignment="Center" Grid.Column="2" Grid.Row="2"/>
 
+                    </Grid>
+                </Frame>
 
-            <Frame BackgroundColor="DimGray" Padding="20, 0, 0,0" Margin="10" CornerRadius="10"></Frame>
+                <Grid Grid.Column="0" Grid.Row="1" Margin="10,25,10,10">
+                    <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                     <RowDefinition Height="*"/>
 
-                <Label Text="Ostricourt " FontSize="Title" TextColor="#fff" Padding="30,10,30,10"/>
+                    </Grid.RowDefinitions>
 
-                <DatePicker></DatePicker>
+                    <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="*"/>
+                     </Grid.ColumnDefinitions>
+                    
+                    <Image Source="heart.png" Grid.Column="0" Grid.Row="0"/>
+                    <Label Text="Fréq. cardiaque" FontSize="Body" TextColor="#fff"   Grid.Column="1" Grid.Row="0"/>
+                    <Label Text="56 RE" FontSize="Body" TextColor="#fff"  HorizontalTextAlignment="Start"  Grid.Column="2" Grid.Row="0"/>
+                    <Label Text="176 +H" FontSize="Body" TextColor="#fff"  HorizontalTextAlignment="End"  Grid.Column="2" Grid.Row="0" />
 
+                    <Image Source="protection.png" Grid.Column="0" Grid.Row="1"/>
+                    <Label Text="Body Battery" FontSize="Body" TextColor="#fff"   Grid.Column="1" Grid.Row="1"/>
+                    <Label Text="+22/-25" FontSize="Body" TextColor="#fff"   Grid.Column="2" Grid.Row="1"/>
+
+                    <Image Source="headache.png" Grid.Column="0" Grid.Row="2"/>
+                    <Label Text="Niveau de stress" FontSize="Body" TextColor="#fff"   Grid.Column="1" Grid.Row="2"/>
+                    <Label Text="21" FontSize="Body" TextColor="#fff"   Grid.Column="2" Grid.Row="2"/>
+
+                    <Image Source="monitor.png" Grid.Column="0" Grid.Row="3"/>
+                    <Label Text="Mn intensives" FontSize="Body" TextColor="#fff"   Grid.Column="1" Grid.Row="3"/>
+                    <Label Text="116 TOTAL QUOTIDIEN" FontSize="Body" TextColor="#fff"   Grid.Column="2" Grid.Row="3"/>
+
+                    <Image Source="footprints.png" Grid.Column="0" Grid.Row="4"/>
+                    <Label Text="Pas" FontSize="Body" TextColor="#fff"   Grid.Column="1" Grid.Row="4"/>
+                    <Label Text="9673" FontSize="Body" TextColor="#fff"   Grid.Column="2" Grid.Row="4"/>
+
+                    <Image Source="calories.png" Grid.Column="0" Grid.Row="5"/>
+                    <Label Text="Calories" FontSize="Body" TextColor="#fff"   Grid.Column="1" Grid.Row="5"/>
+                    <Label Text="2839" FontSize="Body" TextColor="#fff"   Grid.Column="2" Grid.Row="5"/>
+
+                </Grid>
+                
             </Grid>
-        </Frame>
 
+        </StackLayout>
 
-  
-
-
-
-
+    </ContentPage.Content>
 </ContentPage>
